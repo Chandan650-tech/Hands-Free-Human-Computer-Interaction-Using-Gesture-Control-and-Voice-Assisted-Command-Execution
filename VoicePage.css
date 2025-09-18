@@ -1,0 +1,142 @@
+/* Full Page Container */
+.voice-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 20px;
+}
+
+/* Proton Box */
+.voice-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 20px;
+  width: 280px;
+  height: auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.voice-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Perfect Circle GIF */
+.assistant-face {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+}
+
+.assistant-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Enforces perfect circle */
+  transition: transform 0.3s ease-in-out;
+}
+
+.assistant-face.active img {
+  transform: scale(1.1);
+}
+
+/* Text Section: Proper Spacing */
+.text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px; /* Reduced spacing */
+  margin-bottom: 10px;
+}
+
+.status-text {
+  font-size: 14px;
+  color: white;
+  white-space: nowrap;
+}
+
+.user-text {
+  font-size: 14px;
+  color: #f0f0f0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Button Group: Neatly Arranged */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.start-button, .stop-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.stop-button {
+  background-color: #f44336;
+}
+
+.start-button:hover, .stop-button:hover {
+  background-color: #2563eb;
+}
+
+/* Back to Home Button */
+.back-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #1e40af;
+}
+
+@media (max-width: 480px) {
+  .voice-panel {
+      width: 220px;
+      padding: 15px;
+  }
+
+  .assistant-face {
+      width: 90px;
+      height: 90px;
+  }
+
+  .start-button, .stop-button {
+      font-size: 12px;
+      padding: 6px 12px;
+  }
+
+  .back-button {
+      padding: 10px 20px;
+      font-size: 14px;
+  }
+}

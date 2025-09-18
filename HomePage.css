@@ -1,0 +1,155 @@
+/* 🌌 Home Page Styling */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🌟 Animated gradient background glow */
+.home-container::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #2563eb,
+    #38bdf8,
+    #06b6d4,
+    #9333ea,
+    #2563eb
+  );
+  animation: rotate 20s linear infinite;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.home-container h1 {
+  font-size: 3.2rem;
+  color: #38bdf8;
+  margin-bottom: 20px;
+  text-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
+  font-weight: 800;
+  z-index: 1;
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+.home-container p {
+  font-size: 1.4rem;
+  color: #cbd5e1;
+  margin-bottom: 40px;
+  z-index: 1;
+  animation: fadeInUp 1.4s ease-in-out;
+}
+
+/* ✨ Navigation buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  z-index: 1;
+}
+
+.nav-button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 18px 36px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🌈 Glow effect */
+.nav-button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.6), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.nav-button:hover::after {
+  opacity: 1;
+}
+
+.nav-button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.5);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .nav-button {
+    padding: 14px 26px;
+    font-size: 1rem;
+  }
+
+  .home-container h1 {
+    font-size: 2.4rem;
+  }
+
+  .home-container p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-buttons {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .nav-button {
+    width: 85%;
+  }
+}
+
+/* 🌟 Simple fade animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,158 @@
+/* GesturePanel.css */
+
+/* Panel Styling */
+.gesture-panel {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gesture-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+  
+  .gesture-panel h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  /* Control Buttons */
+  .controls {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:disabled {
+    background: #475569;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Logs Panel */
+  .log-panel {
+    background-color: #0f172a;
+    padding: 20px;
+    border-radius: 16px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.4);
+    transition: max-height 0.3s ease;
+  }
+  
+  .log-panel h3 {
+    color: #60a5fa;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  li {
+    background-color: #334155;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    animation: fadeIn 0.5s ease;
+    cursor: default;
+  }
+  
+  li:hover {
+    background-color: #475569;
+    transform: scale(1.02);
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  /* Error Styling */
+  .error {
+    color: #f87171;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .gesture-panel {
+      padding: 20px;
+    }
+  
+    .gesture-panel h2 {
+      font-size: 1.6rem;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  
+    .log-panel {
+      max-height: 250px;
+    }
+  
+    li {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gesture-panel h2 {
+      font-size: 1.4rem;
+    }
+  
+    button {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .controls {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .log-panel {
+      max-height: 200px;
+    }
+  }
+  
