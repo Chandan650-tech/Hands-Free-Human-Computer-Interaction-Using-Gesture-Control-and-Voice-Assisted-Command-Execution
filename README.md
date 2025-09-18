@@ -1,0 +1,2 @@
+# Hands-Free-Human-Computer-Interaction-Using-Gesture-Control-and-Voice-Assisted-Command-Execution
+Developed a gesture-controlled system using Python, OpenCV, and MediaPipe for touchless PC operations like navigation and app control. Integrated a FastAPI-based voice assistant for launching apps, web search, and automation. Focused on accessibility, convenience, and real-world applications in education, healthcare, and assistive tech.
