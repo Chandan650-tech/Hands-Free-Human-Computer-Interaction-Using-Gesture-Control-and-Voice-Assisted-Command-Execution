@@ -294,3 +294,4 @@ async def handle_voice_command(request: Request):
 def timer_countdown(timer_id, seconds):
     time.sleep(seconds)
     print(f"⏰ Timer {timer_id} finished!")
+
